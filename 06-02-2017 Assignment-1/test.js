@@ -12,22 +12,41 @@ function validateForm() {
 
     if (fName.value.trim().length == 0) {
         fName.focus();
-        alert("Invalid First Name");
-    } else if (lName.value.trim().length == 0) {
-        lName.focus();
-        alert("Invalid Last Name");
-    } else if (uid.value.trim().length == 0 || !/^\S*$/.test(uid.value.trim())) {
-        uid.focus();
-        alert("Invalid User ID");
-    } else if (pwd.value.length == 0) {
-        pwd.focus();
-        alert("Invalid Password");
-    } else if (country.value.length == 0) {
-        country.focus();
-        alert("Select Country");
-    } else if (hobbies.length == 0) {
-        alert("Select at least one hobby");
+        showMessage("fNameMessage", "Invalid First Name");
     } else {
-        alert("all pass");
+        showMessage("fNameMessage", "");
     }
+    if (lName.value.trim().length == 0) {
+        lName.focus();
+        showMessage("lNameMessage", "Invalid Last Name");
+    } else {
+        showMessage("lNameMessage", "");
+    }
+    if (uid.value.trim().length == 0 || !/^[A-Za-z0-9]*$/.test(uid.value.trim())) {
+        uid.focus();
+        showMessage("uidMessage", "Invalid User ID");
+    } else {
+        showMessage("uidMessage", "");
+    }
+    if (pwd.value.length == 0) {
+        pwd.focus();
+        showMessage("passwordMessage", "Invalid Password");
+    } else {
+        showMessage("passwordMessage", "");
+    }
+    if (country.value.length == 0) {
+        country.focus();
+        showMessage("countryMessage", "Select Country");
+    } else {
+        showMessage("countryMessage", "");
+    }
+    if (hobbies.length == 0) {
+        showMessage("hbsMessage", "Select at least one hobby");
+    } else {
+        showMessage("hbsMessage", "");
+    }
+}
+
+function showMessage(c, msg) {
+    document.getElementById(c).innerHTML = msg;
 }

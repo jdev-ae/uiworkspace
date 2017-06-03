@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Testing</title>
+    <script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" id="fName" name="fName"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="lName" name="lName"></td>
+        </tr>
+        <tr>
+            <td>User ID</td>
+            <td><input type="text" id="uid" name="uid"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" id="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td><select name="country" id="country">
+                <option></option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>IN</option>
+                <option>CN</option>
+                <option>CAN</option>
+                <option>JAP</option>
+                <option>PAK</option>
+                <option>SL</option>
+                <option>PR</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Hobbies</td>
+            <td>
+                <fieldset>
+                    Cricket <input type="checkbox" name="hbs" value="Cricket">
+                    Soccer <input type="checkbox" name="hbs" value="Soccer">
+                    Basket Ball<input type="checkbox" name="hbs" value="Basket Ball">
+                    Swimming <input type="checkbox" name="hbs" value="Swimming">
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+    <button type="button" onclick="validateForm()">Submit</button>
+</form>
+</body>
+</html>

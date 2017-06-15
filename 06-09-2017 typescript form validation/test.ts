@@ -9,7 +9,7 @@ function validateForm() {
     var password: string = (<HTMLInputElement>document.getElementById("password")).value;
     var country: string = (<HTMLInputElement>document.getElementById("country")).value;
     var hobbies: number = document.querySelectorAll('input[name="hbs"]:checked').length;
-
+    
     if (firstName.length === 0) {
         alert("Invalid first name");
     } else if (lastName.length === 0) {
@@ -24,4 +24,3 @@ function validateForm() {
         alert("Please select at least one hobby");
     }
 }
-
